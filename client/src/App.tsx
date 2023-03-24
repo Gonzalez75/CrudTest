@@ -2,7 +2,15 @@ import React, { useState } from "react";
 import "./App.css";
 
 export function App() {
-  const [values, SetValues] = useState();
+  const [values, setValues] = useState();
+
+  const handleaddValues = (value) => {
+    setValues((prevValues) => ({
+      ...prevValues,
+      [value.target.name]: value.target.value,
+    }));
+  };
+
   return (
     <div className="app--container">
       <div className="register--container">
@@ -12,6 +20,7 @@ export function App() {
           name="name"
           placeholder="Nome"
           className="register--input"
+          onChange={handleSubmit}
         />
         <input
           type="text"
