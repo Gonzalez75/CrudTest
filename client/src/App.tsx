@@ -20,7 +20,7 @@ export function App() {
           name="name"
           placeholder="Nome"
           className="register--input"
-          onChange={handleSubmit}
+          onChange={}
         />
         <input
           type="text"
@@ -34,7 +34,7 @@ export function App() {
           placeholder="Categoria"
           className="register--input"
         />
-        <button className="register-button">Cadastrar</button>
+        <button className="register-button">Cadastrar Item</button>
       </div>
     </div>
   );
